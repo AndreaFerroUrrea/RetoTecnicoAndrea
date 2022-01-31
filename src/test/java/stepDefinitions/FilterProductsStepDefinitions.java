@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.saucedemo.tasks.FilterTasks;
 import com.saucedemo.tasks.LoginTasks;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -31,7 +32,7 @@ public class FilterProductsStepDefinitions {
 
     @When("^she wants to filter the products from highest to lowest price$")
     public void sheWantsToFilterTheProductsFromHighestToLowestPrice() {
-andrea.attemptsTo();
+        andrea.attemptsTo(FilterTasks.info());
 
     }
 
