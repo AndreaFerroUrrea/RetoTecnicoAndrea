@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-import com.saucedemo.tasks.AddProductTasks;
+import com.saucedemo.questions.PurchaseProductQuestion;
 import com.saucedemo.tasks.LoginTasks;
 import com.saucedemo.tasks.PurchaseProductTasks;
 import cucumber.api.java.Before;
@@ -8,9 +8,11 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Managed;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
 
@@ -38,5 +40,7 @@ public class PurchaseProductStepDefinitions {
 
     @Then("^she validates that the purchase has been made$")
     public void sheValidatesThatThePurchaseHasBeenMade() {
+        andrea.should(GivenWhenThen.seeThat(PurchaseProductQuestion.compare(),
+                Matchers.is(Matchers.equalTo("CHECKOUT: COMPLETE!"))));
     }
 }

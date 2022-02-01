@@ -1,5 +1,6 @@
 package com.saucedemo.tasks;
 
+import com.saucedemo.interactions.Wait;
 import com.saucedemo.userinterface.FilterPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
@@ -12,7 +13,9 @@ public class FilterTasks implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(FilterPage.FILTRO));
+        actor.attemptsTo(Wait.object());
         actor.attemptsTo(Click.on(FilterPage.PRICE_LOW_HIGH));
+        actor.attemptsTo(Wait.object());
     }
     public static Performable info(){
         return Tasks.instrumented(FilterTasks.class);
