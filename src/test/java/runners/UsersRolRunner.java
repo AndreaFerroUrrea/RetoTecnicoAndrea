@@ -9,6 +9,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/features/usersRol.feature",
 snippets = SnippetType.CAMELCASE,
 glue = "stepDefinitions",
-dryRun = true)
-public class UsersRol {
+dryRun = false)
+public class UsersRolRunner {
 }

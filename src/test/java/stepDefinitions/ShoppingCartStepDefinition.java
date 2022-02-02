@@ -22,6 +22,7 @@ public class ShoppingCartStepDefinition {
     @Managed
     private WebDriver hisBrowser;
     Actor andrea = new Actor("andrea");
+
     @Before
     public void setUp(){
         andrea.can(BrowseTheWeb.with(hisBrowser));

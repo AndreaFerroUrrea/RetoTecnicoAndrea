@@ -12,7 +12,7 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
 
-public class FilterProductsStepDefinitions {
+public class FilterProductsStepDefinition {
 
     @Managed
     private WebDriver hisBrowser;

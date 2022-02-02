@@ -16,7 +16,7 @@ import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
 
-public class PurchaseProductStepDefinitions {
+public class PurchaseProductStepDefinition {
 
     @Managed
     private WebDriver hisBrowser;
