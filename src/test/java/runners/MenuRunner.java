@@ -11,4 +11,5 @@ snippets = SnippetType.CAMELCASE,
 glue = "stepDefinitions")
 
 public class MenuRunner {
+
 }

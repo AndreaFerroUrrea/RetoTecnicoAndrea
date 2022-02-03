@@ -1,6 +1,8 @@
 package stepDefinitions;
 
+import com.saucedemo.tasks.AddProductTasks;
 import com.saucedemo.tasks.LoginTasks;
+import com.saucedemo.tasks.MenuTasks;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -20,18 +22,19 @@ public class MenuStepDefinition {
 
     @Before
     public void setUp(){
-        BrowseTheWeb.with(hisBrowser);
+        andrea.can(BrowseTheWeb.with(hisBrowser));
     }
 
     @Given("^Andrea as a client wishes to reset the state of the application$")
     public void andreaAsAClientWishesToResetTheStateOfTheApplication() {
         andrea.wasAbleTo(Open.url("https://www.saucedemo.com/"));
         andrea.attemptsTo(LoginTasks.info());
+        andrea.attemptsTo(AddProductTasks.info());
     }
 
     @When("^she chooses the option in the menu$")
     public void sheChoosesTheOptionInTheMenu() {
-        // Write code here that turns the phrase above into concrete actions
+        andrea.attemptsTo(MenuTasks.info());
 
     }
 

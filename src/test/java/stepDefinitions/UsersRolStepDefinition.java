@@ -20,7 +20,6 @@ public class UsersRolStepDefinition {
         // E,K,V must be a scalar (String, Integer, Date, enum etc).
         // Field names for YourType must match the column names in
         // your feature file (except for spaces and capitalization).
-        
     }
 
     @Then("^she should see the appropriate result for each role$")
