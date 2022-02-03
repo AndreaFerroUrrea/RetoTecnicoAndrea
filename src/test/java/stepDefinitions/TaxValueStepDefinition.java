@@ -29,19 +29,19 @@ public class TaxValueStepDefinition {
     @Given("^Andrea as a customer when making a purchase$")
     public void andreaAsACustomerWhenMakingAPurchase() {
         andrea.wasAbleTo(Open.url("https://www.saucedemo.com/"));
-        andrea.attemptsTo(LoginTasks.info());
-        andrea.attemptsTo(PurchaseProductTasks.info());
+        //andrea.attemptsTo(LoginTasks.info());
+        //andrea.attemptsTo(PurchaseProductTasks.info());
     }
 
     @When("^she consults the tax value of the purchase$")
     public void sheConsultsTheTaxValueOfThePurchase() {
 
     }
-
-    @Then("^she checks that the tax is (\\d+)%$")
-    public void sheChecksThatTheTaxIs(int arg1) {
-
+    @Then("^she checks that the tax is (.*)$")
+    public void sheChecksThatTheTaxIs(String porcent) {
+        System.out.println(porcent);
     }
+
 
     ///////////////////////////////////////////////////////////////////////////////////////////
 

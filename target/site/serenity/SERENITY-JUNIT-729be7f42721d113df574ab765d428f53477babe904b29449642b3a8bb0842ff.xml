@@ -1,1 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Tax Value" skipped="2" tests="2" time="0.43" timestamp="2022-02-02 09:03:22"><testcase name="check tax calculations"><skipped/></testcase><testcase name="Validate final value"><skipped/></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="2" failures="0" name="Tax Value" skipped="0" tests="2" time="0.76" timestamp="2022-02-02 12:46:19"><testcase name="check tax calculations"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+stepDefinitions.TaxValueStepDefinition.andreaAsACustomerWhenMakingAPurchase(TaxValueStepDefinition.java:31)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase><testcase name="Validate final value"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+stepDefinitions.TaxValueStepDefinition.andreaAsSwagLabsCustomer(TaxValueStepDefinition.java:50)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>

@@ -15,7 +15,7 @@ import org.openqa.selenium.WebDriver;
 public class FilterProductsStepDefinition {
 
     @Managed
-    private WebDriver hisBrowser;
+    public WebDriver hisBrowser;
     Actor andrea = new Actor("andrea");
 
     @Before
@@ -38,5 +38,6 @@ public class FilterProductsStepDefinition {
 
     @Then("^she sees the products from highest to lowest price$")
     public void sheSeesTheProductsFromHighestToLowestPrice() {
+
     }
 }

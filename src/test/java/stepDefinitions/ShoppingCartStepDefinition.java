@@ -20,7 +20,7 @@ import org.openqa.selenium.WebDriver;
 public class ShoppingCartStepDefinition {
 
     @Managed
-    private WebDriver hisBrowser;
+    public WebDriver hisBrowser;
     Actor andrea = new Actor("andrea");
 
     @Before

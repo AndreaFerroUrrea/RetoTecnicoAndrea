@@ -47,6 +47,6 @@ dependencies {
     implementation group: 'com.codoid.products', name: 'fillo', version: '1.21'
     implementation group: 'io.appium', name: 'java-client', version: '4.1.2'
     //cobertura
-    //implementation group: 'net.serenity-bdd', name: 'serenity-jira-requirements-provider'
+    implementation group: 'net.serenity-bdd', name: 'serenity-jira-requirements-provider'
 
 }

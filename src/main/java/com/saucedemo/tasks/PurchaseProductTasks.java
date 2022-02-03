@@ -19,6 +19,7 @@ public class PurchaseProductTasks implements Task {
         actor.wasAbleTo(Enter.keyValues("Ferro").into(ProductsPage.LAST_NAME));
         actor.wasAbleTo(Enter.keyValues("Aranjuez").into(ProductsPage.POSTAL_CODE));
         actor.wasAbleTo(Click.on(ProductsPage.CONTINUE));
+        //Aqui se ve el precio
         actor.wasAbleTo(Click.on(ProductsPage.FINISH));
 
     }
