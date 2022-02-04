@@ -11,5 +11,4 @@ snippets = SnippetType.CAMELCASE,
 glue = "stepDefinitions",
 dryRun = false)
 public class UsersRolRunner {
-
 }

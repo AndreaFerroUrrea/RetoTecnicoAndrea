@@ -4,10 +4,11 @@ public class DataUser {
     private String username;
     private String password;
 
-    public DataUser(String username, String password) {
+    public DataUser() {
         this.username = username;
         this.password = password;
     }
+
 
     public String getUsername() {
         return username;
