@@ -1,8 +1,6 @@
 package stepDefinitions;
 
-import com.saucedemo.models.DataUser;
-import com.saucedemo.tasks.LoginTasks;
-import cucumber.api.DataTable;
+import com.saucedemo.tasks.LoginRolTasks;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,6 +10,8 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
+
+import java.util.Map;
 
 public class UsersRolStepDefinition {
     @Managed
@@ -29,16 +29,14 @@ public class UsersRolStepDefinition {
 andrea.wasAbleTo(Open.url("https://www.saucedemo.com/"));
     }
 
-    @When("^she wants to try the different roles with \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void sheWantsToTryTheDifferentRolesWithAnd(String username, String password) {
 
-        DataUser dataUser = new DataUser();
-        dataUser.setUsername(username);
-        dataUser.setPassword(password);
-
+    @When("^she wants to try the different roles with$")
+    public void sheWantsToTryTheDifferentRolesWith(Map<String, String> userData)  {
+        andrea.attemptsTo(LoginRolTasks.info(userData));
     }
 
     @Then("^she should see the appropriate result for each role$")
     public void sheShouldSeeTheAppropriateResultForEachRole() {
+
     }
 }

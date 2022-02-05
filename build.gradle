@@ -1,8 +1,5 @@
-
-defaultTasks 'clean'
-version '1.0-SNAPSHOT'
-tasks.withType(JavaCompile){ options.encoding = 'UTF-8' }
 group 'org.example'
+version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -10,25 +7,21 @@ repositories {
 
 buildscript {
     repositories {
-        mavenCentral()
+        maven {
+            mavenCentral()
+            url "https://plugins.gradle.org/m2/"        }
     }
     dependencies {
         classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.81")
-        classpath "net.serenity-bdd:serenity-single-page-report:2.1.4"
+        classpath "io.freefair.gradle:lombok-plugin:5.0.0-rc6"
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'eclipse'
-apply plugin: 'net.serenity-bdd.aggregator'
-
-
-
-serenity {
-    reports = ["single-page-html"]
-}
-
+apply plugin: "io.freefair.lombok"
+apply plugin:'java'
+apply plugin:'idea'
+apply plugin:'eclipse'
+apply plugin:'net.serenity-bdd.aggregator'
 
 
 dependencies {

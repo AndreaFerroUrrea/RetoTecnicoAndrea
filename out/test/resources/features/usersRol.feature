@@ -2,7 +2,9 @@ Feature: user role
 
   Scenario Outline: Test different user roles
     Given Andrea is a client who needs to log in
-    When she wants to try the different roles with "<username>" and "<password>"
+    When she wants to try the different roles with
+    |username|<username>|
+    |password|<password>|
     Then she should see the appropriate result for each role
     Examples:
       | username                | password     |
