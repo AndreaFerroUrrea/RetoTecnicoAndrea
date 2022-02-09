@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import com.saucedemo.tasks.LoginTasks;
 import com.saucedemo.tasks.PurchaseProductTasks;
+import com.saucedemo.tasks.TaxTasks;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -17,8 +18,9 @@ public class TaxValueStepDefinition {
 
 
     @Managed
+    public WebDriver hisBrowser;
     Actor andrea = new Actor("andrea");
-    private WebDriver hisBrowser;
+
 
     @Before
     public void setUp(){
@@ -26,29 +28,24 @@ public class TaxValueStepDefinition {
     }
 
 
+
     @Given("^Andrea as a customer when making a purchase$")
     public void andreaAsACustomerWhenMakingAPurchase() {
         andrea.wasAbleTo(Open.url("https://www.saucedemo.com/"));
-        //andrea.attemptsTo(LoginTasks.info());
-        //andrea.attemptsTo(PurchaseProductTasks.info());
+        andrea.attemptsTo(LoginTasks.info());
+        andrea.attemptsTo(TaxTasks.info());
     }
-
     @When("^she consults the tax value of the purchase$")
     public void sheConsultsTheTaxValueOfThePurchase() {
-
     }
     @Then("^she checks that the tax is (.*)$")
     public void sheChecksThatTheTaxIs(String porcent) {
-        System.out.println(porcent);
+
     }
-
-
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     @Given("^Andrea as Swag Labs customer$")
     public void andreaAsSwagLabsCustomer() {
-        andrea.wasAbleTo(Open.url("https://www.saucedemo.com/"));
-        andrea.attemptsTo(LoginTasks.info());
 
     }
 

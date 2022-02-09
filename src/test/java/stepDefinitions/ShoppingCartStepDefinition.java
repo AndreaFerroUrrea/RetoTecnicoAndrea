@@ -28,22 +28,18 @@ public class ShoppingCartStepDefinition {
         andrea.can(BrowseTheWeb.with(hisBrowser));
     }
 
-
     @Given("^Andrea correctly enters the login data$")
     public void andreaCorrectlyEntersTheLoginData() {
         andrea.wasAbleTo(Open.url("https://www.saucedemo.com/"));
         andrea.attemptsTo(LoginTasks.info());
     }
-
     @When("^she wants to check the operation of the cart$")
     public void sheWantsToCheckTheOperationOfTheCart() {
 andrea.attemptsTo(AddProductTasks.info());
     }
-
     @Then("^she should validate the cart product$")
     public void sheShouldValidateTheCartProduct() {
         andrea.should(GivenWhenThen.seeThat(AddProductQuestions.compare(),
                 Matchers.equalTo("1")));
-
     }
 }
