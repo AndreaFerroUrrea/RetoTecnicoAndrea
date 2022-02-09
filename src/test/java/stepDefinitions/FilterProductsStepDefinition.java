@@ -33,11 +33,11 @@ public class FilterProductsStepDefinition {
     @When("^she wants to filter the products from highest to lowest price$")
     public void sheWantsToFilterTheProductsFromHighestToLowestPrice() {
         andrea.attemptsTo(FilterTasks.info());
-
     }
 
     @Then("^she sees the products from highest to lowest price$")
     public void sheSeesTheProductsFromHighestToLowestPrice() {
+//Validar por medio de una lista si el primero si es el mayor
 
     }
 }

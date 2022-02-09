@@ -40,7 +40,7 @@ public class MenuStepDefinition {
 
     @Then("^she watches the reset app$")
     public void sheWatchesTheResetApp() {
-        // Write code here that turns the phrase above into concrete actions
+
 
     }
 }

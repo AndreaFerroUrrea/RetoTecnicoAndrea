@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="2" failures="0" name="Tax Value" skipped="0" tests="2" time="0.76" timestamp="2022-02-02 12:46:19"><testcase name="check tax calculations"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="2" failures="0" name="Tax Value" skipped="0" tests="2" time="1.18" timestamp="2022-02-09 10:17:32"><testcase name="check tax calculations"><error type="java.lang.NullPointerException"/><system-err>null&#13;
 stepDefinitions.TaxValueStepDefinition.andreaAsACustomerWhenMakingAPurchase(TaxValueStepDefinition.java:31)&#13;
 cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
 </system-err></testcase><testcase name="Validate final value"><error type="java.lang.NullPointerException"/><system-err>null&#13;
