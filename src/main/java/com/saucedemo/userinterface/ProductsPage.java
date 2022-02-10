@@ -14,5 +14,5 @@ public class ProductsPage extends PageObject {
     public static final Target FINISH = Target.the("finalizar proceso de compra").locatedBy("//*[@id='finish']");
     public static final Target CHECKOUT_COMPLETE = Target.the("campo para validar si la compra se hizo correctamente").locatedBy("//*[@id='header_container']/div[2]/span");
     public static final Target ADD_PRODUCT_SHOPPING_CART = Target.the("Carrito incrementacion prroducto").locatedBy("//*[@id='shopping_cart_container']/a/span");
-
+    public static final Target PRICE_MAX = Target.the("Guarda el precio del producto con el precio mayor").locatedBy("//*[@id='inventory_container']/div/div[1]/div[2]/div[2]/div");
 }

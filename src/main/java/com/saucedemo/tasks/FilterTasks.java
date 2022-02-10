@@ -12,6 +12,7 @@ public class FilterTasks implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(LoginTasks.info());
         actor.attemptsTo(Click.on(FilterPage.FILTRO));
         actor.attemptsTo(Wait.object());
         actor.attemptsTo(Click.on(FilterPage.PRICE_LOW_HIGH));

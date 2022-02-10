@@ -1,7 +1,6 @@
 package stepDefinitions;
 
-import com.saucedemo.questions.AddProductQuestions;
-import com.saucedemo.questions.PurchaseProductQuestion;
+import com.saucedemo.questions.AddProductQuestion;
 import com.saucedemo.tasks.AddProductTasks;
 import com.saucedemo.tasks.LoginTasks;
 import cucumber.api.java.Before;
@@ -12,7 +11,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
-import net.serenitybdd.screenplay.actions.OpenUrl;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
@@ -39,7 +37,7 @@ andrea.attemptsTo(AddProductTasks.info());
     }
     @Then("^she should validate the cart product$")
     public void sheShouldValidateTheCartProduct() {
-        andrea.should(GivenWhenThen.seeThat(AddProductQuestions.compare(),
+        andrea.should(GivenWhenThen.seeThat(AddProductQuestion.compare(),
                 Matchers.equalTo("1")));
     }
 }

@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Tax Value" skipped="0" tests="1" time="10.2" timestamp="2022-02-09 02:26:03"><testcase name="check tax calculations"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Tax Value" skipped="0" tests="2" time="7.78" timestamp="2022-02-10 07:28:59"><testcase name="check tax calculations"/><testcase name="Validate final value"/></testsuite>
