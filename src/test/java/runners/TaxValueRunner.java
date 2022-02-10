@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/features/taxValue.feature",
         snippets = SnippetType.CAMELCASE,
-        glue = "stepDefinitions")
+        glue = "stepDefinitions",
+        dryRun = false)
 
 public class TaxValueRunner {
 

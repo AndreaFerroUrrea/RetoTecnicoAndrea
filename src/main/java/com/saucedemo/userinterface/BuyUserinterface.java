@@ -4,7 +4,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 
 
-public class BuyPage extends PageObject {
+public class BuyUserinterface extends PageObject {
     public static final Target PRICE = Target.the("guardar el porcentaje del producto")
             .locatedBy("//*[@id='checkout_summary_container']/div/div[2]/div[5]");
 

@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.saucedemo.questions.AddProductQuestion;
 import com.saucedemo.tasks.AddProductTasks;
 import com.saucedemo.tasks.LoginTasks;
 import com.saucedemo.tasks.MenuTasks;
@@ -8,9 +9,11 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Managed;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
 
@@ -40,7 +43,7 @@ public class MenuStepDefinition {
 
     @Then("^she watches the reset app$")
     public void sheWatchesTheResetApp() {
-
-
+        andrea.should(GivenWhenThen.seeThat(AddProductQuestion.compare(),
+                Matchers.equalTo("0")));
     }
 }

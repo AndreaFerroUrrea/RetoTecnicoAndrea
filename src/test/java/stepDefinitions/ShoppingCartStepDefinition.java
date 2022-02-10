@@ -2,7 +2,6 @@ package stepDefinitions;
 
 import com.saucedemo.questions.AddProductQuestion;
 import com.saucedemo.tasks.AddProductTasks;
-import com.saucedemo.tasks.LoginTasks;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -29,11 +28,11 @@ public class ShoppingCartStepDefinition {
     @Given("^Andrea correctly enters the login data$")
     public void andreaCorrectlyEntersTheLoginData() {
         andrea.wasAbleTo(Open.url("https://www.saucedemo.com/"));
-        andrea.attemptsTo(LoginTasks.info());
     }
     @When("^she wants to check the operation of the cart$")
     public void sheWantsToCheckTheOperationOfTheCart() {
-andrea.attemptsTo(AddProductTasks.info());
+        andrea.attemptsTo(AddProductTasks.info());
+
     }
     @Then("^she should validate the cart product$")
     public void sheShouldValidateTheCartProduct() {

@@ -1,6 +1,6 @@
 package com.saucedemo.tasks;
 
-import com.saucedemo.userinterface.LoginPage;
+import com.saucedemo.userinterface.LoginUserinterface;
 import lombok.AllArgsConstructor;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
@@ -18,9 +18,9 @@ public class LoginRolTasks implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Enter.keyValues(userData.get("username")).into(LoginPage.USER_NAME));
-        actor.attemptsTo(Enter.keyValues(userData.get("password")).into(LoginPage.PASSWORD));
-        actor.attemptsTo(Click.on(LoginPage.LOGIN));
+        actor.attemptsTo(Enter.keyValues(userData.get("username")).into(LoginUserinterface.USER_NAME));
+        actor.attemptsTo(Enter.keyValues(userData.get("password")).into(LoginUserinterface.PASSWORD));
+        actor.attemptsTo(Click.on(LoginUserinterface.LOGIN));
     }
     public static Performable info(Map<String, String> userData){
         return Tasks.instrumented(LoginRolTasks.class,userData);

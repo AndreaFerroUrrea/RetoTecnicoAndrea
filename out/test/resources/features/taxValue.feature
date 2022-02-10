@@ -1,10 +1,10 @@
-Feature: Tax Value
-  Scenario: check tax calculations
-    Given Andrea as a customer when making a purchase
-    When she consults the tax value of the purchase
-    Then she checks that the tax is <08>
+ Feature: fiscal value
+  Scenario: Check tax calculations
+    Given to Andrea as a customer when making a purchase of the most expensive product
+    When you consult the fiscal value of the purchase
+    Then check that the tax is "Tax: $2.40"
 
   Scenario: Validate final value
-    Given Andrea as Swag Labs customer
-    When she buys a product
-    Then she checks if the value is correct
+    Given to Andrea as a client of Swag Labs
+    When she buys the most expensive product
+    Then check if the total value is "Total: $32.39"

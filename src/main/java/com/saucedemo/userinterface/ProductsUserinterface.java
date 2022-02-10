@@ -3,7 +3,7 @@ package com.saucedemo.userinterface;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class ProductsPage extends PageObject {
+public class ProductsUserinterface extends PageObject {
     public static final Target ADD_PRODUCT = Target.the("Añadir producto al carrito").locatedBy("//*[@id='add-to-cart-sauce-labs-backpack']");
     public static final Target SHOPPING_CART = Target.the("obtener datos carrito").locatedBy("//*[@id='shopping_cart_container']/a");
     public static final Target CHECKOUT = Target.the("Revisar detalles información cliente").locatedBy("//*[@id='checkout']");
